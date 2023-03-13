@@ -11,7 +11,7 @@ https://docs.djangoproject.com/en/2.2/ref/settings/
 """
 
 import os
-import django_heroku
+#import django_heroku
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
@@ -21,14 +21,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'wfutf=6r=ps@hnupd^mztz4#2m_i1h*jkc%#m%)(^0dh1qzt%m'
+SECRET_KEY = "please_change"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['akinator-iwsnd.run-ap-south1.goorm.io',
-                 'akiji.herokuapp.com',
-]
+ALLOWED_HOSTS = ['127.0.0.1']
 
 
 # Application definition
@@ -44,7 +42,7 @@ INSTALLED_APPS = [
 ]
 
 MIDDLEWARE = [
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+    # 'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
@@ -54,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
 ROOT_URLCONF = 'mysite.urls'
 
@@ -132,4 +130,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'static/')
 #     os.path.join(BASE_DIR, 'static/'),
 # ]
 
-django_heroku.settings(locals())
+#django_heroku.settings(locals())
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'

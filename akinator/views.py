@@ -184,7 +184,7 @@ def game(request):
                 user.delete()
 
         # obtaining requested ip AND updating the database
-        ip_requested = (request.META['HTTP_X_FORWARDED_FOR']).strip()
+        ip_requested = (request.META['REMOTE_ADDR']).strip()
         flag = False
         user_pk = 0
         for user in User.objects.all():
@@ -222,7 +222,7 @@ def game(request):
         # redirecting the page after all the changes had been made
         request.method = 'GET'
         return(game(request))
-        
+
     elif(request.method=='GET'):
         # setting current time
         current_time = seconds()
@@ -233,7 +233,7 @@ def game(request):
                 user.delete()
 
         # obtaining requested ip AND updating the database
-        ip_requested = (request.META['HTTP_X_FORWARDED_FOR']).strip()
+        ip_requested = (request.META['REMOTE_ADDR']).strip()
         flag = False
         user_pk = 0
         for user in User.objects.all():
@@ -349,7 +349,8 @@ def submit(request):
                 user.delete()
 
         # obtaining requested ip AND updating the database
-        ip_requested = (request.META['HTTP_X_FORWARDED_FOR']).strip()
+        print(request.META.keys())
+        ip_requested = (request.META['REMOTE_ADDR']).strip()
         flag = False
         user_pk = 0
         for user in User.objects.all():
@@ -393,20 +394,13 @@ def submit(request):
                 return(render(request, template, context))
         # if the user says no
         elif(request.POST['answer']=='N'):
-            # # if the user is not credible, the data is not saved
-            # if(max([float((x.split(','))[1]) for x in (currUser.prob_list.strip('/')).split('/')])<=0.21):
-            #     # currUser.delete()
-            #     return(intro(request))
-            # # if the user is credible, submit_name_page page is rendered
-            # else:
-            if(1):
-                template = 'akinator/submit_name_page.html'
-                names = []
-                for name in Name.objects.all():
-                    names.append(name.name_text)
-                all_names = json.dumps(names)
-                context = {'all_names': all_names}
-                return(render(request, template, context))
+            template = 'akinator/submit_name_page.html'
+            names = []
+            for name in Name.objects.all():
+                names.append(name.name_text)
+            all_names = json.dumps(names)
+            context = {'all_names': all_names}
+            return(render(request, template, context))
         else:
             assert(0)
     else:
@@ -481,7 +475,7 @@ def fastgame(request):
             
             # first the user is updated/created
             current_time=seconds()
-            ip_requested = (request.META['HTTP_X_FORWARDED_FOR']).strip()
+            ip_requested = (request.META['REMOTE_ADDR']).strip()
             flag = False
             user_pk = 0
             for user in User.objects.all():
