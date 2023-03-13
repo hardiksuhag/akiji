@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AkiJi</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'akinator/select_name_page.css' %}">
+</head>
+<body>
+    <div>Please select which name was the actual answer-</div>
+    <div>
+        <form action="" method="post">
+            {% csrf_token %}
+            <button id="b0" class="choice" name="selected_name" value=""></button>
+        </form>
+        <form action="" method="post">
+            {% csrf_token %}
+            <button id="b1" class="choice" name="selected_name" value=""></button>
+        </form>
+        <form action="" method="post">
+            {% csrf_token %}
+            <button id="b2" class="choice" name="selected_name" value=""></button>
+        </form>
+        <form action="" method="post">
+            {% csrf_token %}
+            <button id="b3" class="choice" name="selected_name" value=""></button>
+        </form>
+    </div>
+</body>
+<script>
+    var chosen_names = JSON.parse("{{the_names_json|escapejs}}");
+</script>
+<script type="text/javascript" src="{% static 'akinator/select_name_page.js' %}"></script>
+</html>

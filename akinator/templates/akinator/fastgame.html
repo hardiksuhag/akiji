@@ -1,0 +1,50 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AkiJi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen and (min-width: 361px) and (max-width: 480px)" href="{% static 'akinator/question_page_mob.css' %}">
+	<link rel="stylesheet" type="text/css" media="screen and (min-width: 481px)" href="{% static 'akinator/question_page.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="bkg">
+		<div class="card">
+			<div class="title">AkiJi</div>
+			<div><h2 class="question" id="questionid">    </h2></div>
+			<div class="options">
+                <div>
+                    <button id="yes" class="choice" name="answer">Yes</button>
+                </div>
+                <div>
+                    <button id="idk" class="choice" name="answer">Don't know</button>
+                </div>
+                <div>
+                    <button id="no" class="choice" name="answer">No</button>
+                </div>
+			</div>
+		</div>
+	</div>
+    <form id="submitname" action="" method="post" hidden="true">
+        {% csrf_token %}
+        <input id="pkdata" type="text" name="rpks">
+        <input id="flagdata" type="text" name="flags">
+        <input id="histdata" type="text" name="history">
+        <input id="maxprobdata" type="text" name="maxprob">
+        <input type="submit" name="submitbutton">
+    </form>
+</body>
+<script>
+    var mp = JSON.parse("{{mp|escapejs}}");
+    var mts = JSON.parse("{{mts|escapejs}}");
+    var qp = JSON.parse("{{qp|escapejs}}");
+    var qqt = JSON.parse("{{qqt|escapejs}}");
+    var dp = JSON.parse("{{dp|escapejs}}");
+    var dty = JSON.parse("{{dty|escapejs}}");
+    var dtt = JSON.parse("{{dtt|escapejs}}");
+    var dmp = JSON.parse("{{dmp|escapejs}}");
+    var dqp = JSON.parse("{{dqp|escapejs}}");
+</script>
+<script type="text/javascript" src="{% static 'akinator/fastgame.js' %}"></script>
+</html>

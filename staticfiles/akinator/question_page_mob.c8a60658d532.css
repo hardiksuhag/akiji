@@ -1,0 +1,60 @@
+html {
+    height: 100%;
+    text-align: center;
+}
+body {
+    background: #232323;
+    height: 100%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+    background: url("/static/akinator/bckgrnd.8e314ff3757f.svg") no-repeat center/cover;
+}
+.bkg {
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+}
+.card {
+    width:80%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    height: 70%;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px #232323;
+}
+.title {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    font-weight: bold;
+    font-size: 60px;
+    width: 100%;
+}
+.question {
+    padding-left: 10%;
+    padding-right: 10%;
+    font-weight: 0.5vh;
+}
+.choice:hover{
+    opacity: 0.7;
+}
+.choice{    
+    opacity: 1;
+    transition: all 0.1s ease-in-out;
+	font-size: 100%;
+    font: inherit;
+    border: none;
+    border-radius: 4px;
+    background: #1865f2 !important;
+    color: #ffffff !important;
+    height: 40px; 
+    margin-bottom: 2%;
+    width: 60%;
+}
+
+
+
+

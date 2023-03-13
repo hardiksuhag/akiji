@@ -1,0 +1,83 @@
+html {
+	height: 100%;
+}
+body {
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+}
+.container {
+	text-align: center;
+	margin-left: 35%;
+	width: 30%;
+	height: 100%;
+}
+.heading{
+	margin-top: 30%;
+}
+#search_bar {
+	font-size: 100%;
+	margin-top: 3%;
+	margin-bottom: 3%;
+	width: 100%;
+	font-family: 'Montserrat', sans-serif;
+	border: 2px solid #000000;
+	padding: 5px;
+	height: 30px;
+	border-radius: 5px;
+	outline: none;
+	color: #000000;
+}
+.question {
+    padding-left: 40px;
+    padding-right: 40px;
+}
+button:hover{
+    opacity: 0.7;
+}
+button{
+    opacity: 1;
+    transition: all 0.1s ease-in-out;
+	font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+	-webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    position: relative !important;
+    display: -webkit-inline-box !important;
+    display: -moz-inline-box !important;
+    display: -ms-inline-flexbox !important;
+    display: -webkit-inline-flex !important;
+    display: inline-flex !important;
+    -webkit-align-items: center !important;
+    align-items: center !important;
+    -webkit-justify-content: center !important;
+    justify-content: center !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    border: none !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    outline: none !important;
+    text-decoration: none !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    -ms-touch-action: manipulation !important;
+    touch-action: manipulation !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    background: #1865f2 !important;
+    color: #ffffff !important;
+    -webkit-flex: 1 !important;
+    -ms-flex: 1 !important;
+    flex: 1 !important;
+    min-height: 60px !important;
+    height: 60px !important;
+    margin-bottom: 8px;
+    min-width: 335px !important
+}

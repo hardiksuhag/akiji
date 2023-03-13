@@ -1,0 +1,43 @@
+html {
+	height: 100%;
+}
+body {
+	text-align: center;
+	font-family: 'Montserrat', sans-serif;
+}
+h1{
+	margin-top: 10%;
+}
+button:hover{
+    opacity: 0.7;
+}
+button{
+    opacity: 1;
+    transition: all 0.1s ease-in-out;
+	font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    position: relative !important;
+    -webkit-align-items: center !important;
+    align-items: center !important;
+    -webkit-justify-content: center !important;
+    justify-content: center !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    border: none !important;
+    border-radius: 4px !important;
+    outline: none !important;
+    text-decoration: none !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    -ms-touch-action: manipulation !important;
+    touch-action: manipulation !important;
+    background: #1865f2 !important;
+    color: #ffffff !important;
+    height: 60px !important;
+    min-height: 60px !important;
+    margin-bottom: 8px;
+    min-width: 335px !important
+}

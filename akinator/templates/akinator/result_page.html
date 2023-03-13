@@ -1,0 +1,23 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AkiJi</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'akinator/result_page.css' %}">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="top"><h3>The Person(s) you are thinking of is:-</h3></div>
+    <div><h1 class="result">{{final_names_string}}</h1></div>
+    <div><h4> {{message}} </h4></div>
+    <form action="/submit/" method="post">
+        {% csrf_token %}
+		<button class="choice" name="answer" value="Y">Yes</button>
+	</form>
+    <form action="/submit/" method="post">
+        {% csrf_token %}
+		<button class="choice" name="answer" value="N">No</button>
+	</form>
+</body>
+<script type="text/javascript" src="{% static 'akinator/result_page.js' %}"></script>
+</html>

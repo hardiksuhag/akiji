@@ -1,0 +1,91 @@
+html {
+    height: 100%;
+    text-align: center;
+}
+body {
+    background: #232323;
+    height: 100%;
+    text-align: center;
+    font-family: 'Montserrat', sans-serif;
+    margin: 0px;
+}
+.bkg {
+    background: url("/static/akinator/bckgrnd.8e314ff3757f.svg") no-repeat center;
+    height: 100%;
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    overflow: hidden;
+}
+.card {
+    width:46%;
+    margin-left: 27%;
+    margin-right: 27%;
+    margin-top: 100px;
+    margin-bottom: 40px;
+    height: 80%;
+    background: white;
+    border-radius: 4px;
+    box-shadow: 5px 5px 5px #232323;
+}
+.title {
+    padding-top: 40px;
+    padding-bottom: 30px;
+    font-weight: bold;
+    font-size: 60px;
+    width: 100%;
+}
+.question {
+    padding-left: 10%;
+    padding-right: 10%;
+}
+.choice:hover{
+    opacity: 0.7;
+}
+.choice{
+    opacity: 1;
+    /* transition: all 0.1s ease-in-out; */
+	font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+	-webkit-box-pack: center !important;
+    -ms-flex-pack: center !important;
+    -webkit-box-align: center !important;
+    -ms-flex-align: center !important;
+    position: relative !important;
+    display: -webkit-inline-box !important;
+    display: -moz-inline-box !important;
+    display: -ms-inline-flexbox !important;
+    display: -webkit-inline-flex !important;
+    display: inline-flex !important;
+    -webkit-align-items: center !important;
+    align-items: center !important;
+    -webkit-justify-content: center !important;
+    justify-content: center !important;
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
+    padding-left: 16px !important;
+    padding-right: 16px !important;
+    border: none !important;
+    border-radius: 4px !important;
+    cursor: pointer !important;
+    outline: none !important;
+    text-decoration: none !important;
+    -moz-box-sizing: border-box !important;
+    box-sizing: border-box !important;
+    -ms-touch-action: manipulation !important;
+    touch-action: manipulation !important;
+    -webkit-user-select: none !important;
+    -moz-user-select: none !important;
+    -ms-user-select: none !important;
+    user-select: none !important;
+    background: #1865f2 !important;
+    color: #ffffff !important;
+    -webkit-flex: 1 !important;
+    -ms-flex: 1 !important;
+    flex: 1 !important;
+    min-height: 60px !important;
+    height: 60px !important;
+    margin-bottom: 8px;
+    min-width: 335px !important
+}

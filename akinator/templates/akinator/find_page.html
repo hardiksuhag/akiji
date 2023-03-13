@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Akinator</title>
+	<link rel="stylesheet" type="text/css" href="{% static 'akinator/find_page.css' %}">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="container">
+		<div class="heading">
+            <h3>Please select the name you wanted to search...</h3>
+        </div>
+		<input autocomplete="off" id="search_bar" type="text" name="name" placeholder="Enter Name Here">
+		<form action="" method="get">
+			<button id="r1" name="name_given" class="result"></button>
+        </form>
+		<form action="" method="get">
+			<button id="r2" name="name_given" class="result"></button>
+		</form>
+		<form action="" method="get">
+			<button id="r3" name="name_given" class="result"></button>
+		</form>
+		<form action="" method="get">
+			<button id="r4" name="name_given" class="result"></button>
+		</form>
+		<form action="" method="get">
+			<button id="r5" name="name_given" class="result"></button>
+		</form>
+	</div>
+</body>
+<script>
+    var all_names = JSON.parse("{{all_names|escapejs}}");
+</script>
+<script type="text/javascript" src="{% static 'akinator/find_page.js' %}"></script>
+</html>

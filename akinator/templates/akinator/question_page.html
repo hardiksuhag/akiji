@@ -1,0 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>AkiJi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" type="text/css" media="screen and (min-width: 361px) and (max-width: 480px)" href="{% static 'akinator/question_page_mob.css' %}">
+	<link rel="stylesheet" type="text/css" media="screen and (min-width: 481px)" href="{% static 'akinator/question_page.css' %}">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+</head>
+<body>
+	<div class="bkg">
+		<div class="card">
+			<div class="title">AkiJi</div>
+			<div><h2 class="question">Q-{{question_number}}) {{new_question}}</h2></div>
+			<div class="options">
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <button class="choice" name="answer" value="Y">Yes</button>
+                </form>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <button class="choice" name="answer" value="D">Don't know</button>
+                </form>
+                <form action="" method="post">
+                    {% csrf_token %}
+                    <button class="choice" name="answer" value="N">No</button>
+                </form>
+			</div>
+		</div>
+	</div>
+</body>
+</html>
